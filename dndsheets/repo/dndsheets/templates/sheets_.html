@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">DND Sheets</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href={{url_for('index')}}>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('login')}}>Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('signup')}}>Signup</a>
+					</li>
+				</div>
+			</div>
+		</nav>
+
+	<div class="container py-3">
+
+		<!-- Character Name Data -->
+		<div class="row py-3">
+			<div class="col col-lg-4">
+				<h3>D&D Sheets</h3>
+				<input class="form-control form-control-lg" type="text" name="characterName" placeholder="Character Name">
+			</div>
+			<div class="col col-lg-8">
+				<form>
+					<div class="row">
+						<input class="m-2" type="text" name="race" placeholder="Race">
+						<input class="m-2" type="text" name="class" placeholder="Class">
+						<input class="m-2" type="text" name="background" placeholder="Background">
+					</div>
+					<div class="row">
+						<input class="m-2" type="text" name="alignment" placeholder="Alignment">
+						<input class="m-2" type="text" name="playerName" placeholder="Player Name">
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<!-- Proficency Bonus, Stats, Inspiration -->
+			<div class="col border">
+				<div class="row">
+					<input type="number" name="profBonus" placeholder="Prof Bonus">
+					<p>PROFICIENCY BONUS</p>
+				</div>
+				<div class="row">
+					<input type="number" name="strength" placeholder="Strength">
+				</div>
+				<div class="row">
+					<input type="number" name="dexterity" placeholder="Dexterity">
+				</div>
+				<div class="row">
+					<input type="number" name="constitution" placeholder="Constitution">
+				</div>
+				<div class="row">
+					<input type="number" name="inteligence" placeholder="Inteligence">
+				</div>
+				<div class="row">
+					<input type="number" name="wisdom" placeholder="Wisdom">
+				</div>
+				<div class="row">
+					<input type="number" name="perception" placeholder="Perception">
+					<p>PERCEPTION</p>
+				</div>
+				<div class="row">
+					<input type="number" name="charisma" placeholder="Charisma">
+				</div>
+				<div class="row">
+					<input type="number" name="inspiration" placeholder="Inspiration">
+				</div>
+			</div>
+
+			<div class="col">
+				<!-- HP, Level... -->
+				<div class="row">
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col"></div>
+				</div>
+
+				<!-- Attacks and Spell Casting -->
+				<div class="row"></div>
+			</div>
+
+			<div class="col">
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+</html>

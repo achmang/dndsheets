@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">DND Sheets</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href={{url_for('index')}}>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('login')}}>Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('signup')}}>Signup</a>
+					</li>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container py-3">
+			<div class="jumbotron">
+				<h1 class="display-4">Welcome to DND Sheets</h1>
+				<p class="lead">DND Sheets is a simplistic way to digitally store your dnd character sheets and access them from anywhere for free! For now, character sheets will work in desktop browsers, but will be expanding to mobile and tablet browsers in the future, making it even easier to access your character sheets.</p>
+				<p class="lead">
+					<a class="btn btn-dark btn-lg" href={{url_for('signup')}} role="button">Sign up</a>
+					<a class="btn btn-dark btn-lg" href={{url_for('login')}} role="button">Login</a>
+				</p>
+
+				<small id="github" class="form-text text-muted"> <a href="https://github.com/achmang">Check out my github</a></small>
+			</div>
+		</div>
+
+	</body>
+	</html>

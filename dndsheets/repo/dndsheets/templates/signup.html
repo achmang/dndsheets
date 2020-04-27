@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create an Account</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	{% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">DND Sheets</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href={{url_for('index')}}>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('login')}}>Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href={{url_for('signup')}}>Signup</a>
+					</li>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container py-3">
+			<h4>Create an Account!</h4>
+			<p>By creating an account you'll be able to access your dnd sheets from anywhere.</p>
+
+			<form method="POST" action="/signup">
+				<div class="form-group">
+					{{ form.hidden_tag() }}
+					{{ wtf.form_field(form.username) }}
+					{{ wtf.form_field(form.email) }}
+					{{ wtf.form_field(form.password) }}
+				</div>
+
+				<small id="pwHelp" class="form-text text-muted">It is strongly suggested to use a password you have't used before. Protecting your personal and confidential information.</small>
+				<br>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+	</body>
+	</html>
