@@ -1,6 +1,6 @@
 # dndsheets
 
-slow work in progress,
+Currently a dead project as im not really playing DND.
+Project also has a couple of issues such as open-redirects.
 
-toyed with the idea of creating an online dnd sheet, to make remote dnd easier.
-Hope to come back to this project when our group has more time to play.
+May have more motivation to work on this if I start playing DND again.
